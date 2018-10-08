@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="205*"/>
+            <ColumnDefinition Width="587*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="241*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center">
+            <Label Content="Username"/>
+            <TextBox x:Name="TextBox_User" Width="300" ToolTip="user name"/>
+            <Button x:Name="Connect" Content="Connect" Click="Connect_Click" />
+            <CheckBox x:Name="CheckBox_Hub" Content="HUB" />
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="13*"/>
+                <RowDefinition Height="49*"/>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="51*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Users" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="71,0"/>
+            <ListBox x:Name="ListBox_Users" Grid.Row="1" Margin="0,0,0,0"></ListBox>
+            <Label Content="HUBS" Grid.Row="2" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ListBox x:Name="ListBox_Hubs" Grid.Row="3" Margin="0,0,0,0"></ListBox>
+        </Grid>
+        <ScrollViewer Grid.Column="1" Margin="10,10,10,9" Grid.Row="1">
+            <TextBlock x:Name="TextBlock_Log"   TextWrapping="Wrap" Background="Black" Foreground="White" Padding="5"/>
+        </ScrollViewer>
+        <TextBox x:Name="TextBox_Message" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="94,52,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="184"/>
+        <Button x:Name="send" Content="Send" Grid.Column="1" HorizontalAlignment="Left" Margin="373,85,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="send_Click"/>
+        <TextBox x:Name="ip" HorizontalAlignment="Left" Height="23" Margin="63,10,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="refresh" Content="Refresh" Grid.Column="1" HorizontalAlignment="Left" Margin="405,189,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="refresh_Click"/>
+        <Label x:Name="Label_nousers" Content="NUMAR DE UTILIZATORI: -" Grid.Column="1" HorizontalAlignment="Left" Margin="373,158,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
