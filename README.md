@@ -2,7 +2,7 @@
 
 This app was built for a challenge.
 
-To run u need to change "mainNode_IP"  and "broadcastaddres" with ur public and local ip. App was tested on local network with 3 computers and i managed to create a 1 way connection with 2 different networks. In order for this app to be able to run on 2 different networks, the port 54545 needs to be open. After you compile the app, you just need to share the executable with other computers.
+To run you need to change "mainNode_IP"  and "broadcastaddres" with ur public and local ip. App was tested on local network with 3 computers and i managed to create a 1 way connection with 2 different networks. In order for this app to be able to run on 2 different networks, the port 54545 needs to be open. After you compile the app, you just need to share the executable with other computers.
 
 
 Usage instructions: 
@@ -22,5 +22,5 @@ Upon disconnecting , if a node is disconnected, the message will be broadcasted 
 
 Note: 
 1) Because the app uses the UDP connection sometimes the message might not be recieved by the end point, and all you can do is retry the connection.
-2) Sometimes the app won't connect because of Windows Firewall permission. All u have to do is hit yes and reopen the app (and pray it works).
+2) Sometimes the app won't connect because of Windows Firewall permission. All you have to do is hit yes and reopen the app (and pray it works).
 3) If you want to use the app outside the local network, Port 54545 needs to be open in your router, and ur Windows Firewall.
